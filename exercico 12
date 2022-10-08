@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Digite um número:");
+    int a = scan.nextInt();
+    System.out.println("Os números ímpares até " + a + " são: ");
+    while (a != 0) {
+      int b = a--;
+      if (a % 2 != 0) {
+        System.out.println(a);
+      }
+    }
+  }
+}
