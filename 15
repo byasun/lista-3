@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int a1, b1, media;
+    for (int i = 0; i < 3; i++) {
+      System.out.println("Insira a Primeira nota do Aluno: ");
+      a1 = input.nextInt();
+      System.out.println("Insira a Segunda nota do Aluno: ");
+      b1 = input.nextInt();
+     media = (a1 + b1) / 2;
+      System.out.println("A média para este aluno é: " + media);
+    }
+  }
+}
