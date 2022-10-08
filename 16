@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+public static void main (String[] args) { 
+  Scanner scan = new Scanner (System.in);
+   int n; 
+   int ma = Integer.MIN_VALUE;
+   int me = Integer.MAX_VALUE;
+   for (int i=0; i < 5; i++) {
+    System.out.println("Digite a nota do  aluno: ");
+    n = scan.nextInt();
+      if (n > ma) {
+      ma = n;
+    }
+    if (n < me) {
+      me = n;
+    }
+   }
+    System.out.println("A maior nota informada é " + ma);
+    System.out.println("A menor nota informada é "  + me);
+ }
+}
