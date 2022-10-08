@@ -1,0 +1,38 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    double a, b=0, c=0, t1, t3 = 0, maior = Integer.MIN_VALUE, menor = Integer.MAX_VALUE;
+    int t2=0, d=0;
+    System.out.print("Qual a hora do dia que vc quer saber a temperatura (arredondado por favor): ");
+    a = input.nextInt();
+    t1 = (19.06 + (0.211*(0.08721 * a)))+ (-5.51*(0.08721 * a));
+    System.out.println("a temperatura nesse horário era de " + (String.format("%.2f", t1 )) + " graus celsius");
+    for (t3 = 0; t3 <= 48; t3++) {
+      t1 = (19.06 + (0.211*(0.08721 * t3)))+ (-5.51*(0.08721 * t3));
+      System.out.println(String.format("%.2f", t1)+ "° C");
+      if (t1 > maior) {
+        maior = t1;
+      }
+      if (t1 < menor) {
+        menor = t1;
+      } 
+      if (t1 >= 19){
+        d++;
+      }
+      if (t1 <= 16) {
+        t2++;
+      }
+      if (t1 >0){
+        b = c+t1;
+      } 
+      b = b /48;
+    }
+    System.out.println("\na temperatura nesse horário era de " + (String.format("%.2f", t1 )) + " graus celsius");
+    System.out.println("\nA média da temperatura foi: " + ((String.format("%.2f", b ))));
+    System.out.println("\nA maior temperatura foi " + ((String.format("%.2f", maior ))));
+    System.out.println("\nA menor temperatura foi " + ((String.format("%.2f", menor))));
+    System.out.println("\nA temperatura ficou acima de 19°C por " + d + " horas");
+    System.out.println("\nA temperatura ficou abaixo de 16°C por " + t2 + " horas");
+  }
+}
