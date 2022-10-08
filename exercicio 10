@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main{
+ public static void main (String[] args) { 
+  Scanner scan = new Scanner (System.in);
+   int x = 1;
+   int a;
+   System.out.print("Digite um número: ");
+   a = scan.nextInt();
+   while (a > 1) {
+    x = x * a;
+    a--;
+   }
+   System.out.printf("o fatorial desse número é " + x);
+ }
+}
