@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main{
+ public static void main (String[] args) { 
+  Scanner scan = new Scanner (System.in);
+  int a, b, res = 1;
+   System.out.print("Informe a base: ");
+   a = scan.nextInt();
+   System.out.print("Informe o expoente: ");
+   b = scan.nextInt();
+   for (int i = b; i >= 1; i--) {
+    res = res * a;
+   }
+   System.out.printf("O resultado dessa potência é " + res);
+ }
+}
