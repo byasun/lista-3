@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    Double v0, v, t, h;
+    System.out.println("Informe velocidade inicial:");
+    v0 = input.nextDouble();
+    System.out.println("t(s) \t\t h(t) (m) \t\t v(t) m(s)");
+    for (t = 0.0; t <= 2.0; t += 0.1) {
+      v = v0 - 9.8 * t;
+      h = v0 * t - (9.8 * Math.pow(t, 2)) / 2;
+      System.out.format("%.2f \t\t %.2f \t\t %.2f \n", t, h, v);
+    }
+  }
+}
